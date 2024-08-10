@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALC</title>
+
+    <!--BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--CUSTOM CSS -->
+    <link href="style.css" rel="stylesheet" />
+
+    
+
+</head>
+<body>
+    <div class="calcWrapper">
+        <div class="calcBox">
+            <h4> BMI CALCULATOR</h4>
+            <div class ="resulstBox">
+                <div id="resultNumber"></div>
+                <div id="resultCategory"></div>
+            </div>
+        </div>
+    
+
+    <br>
+
+    <div class="form">
+        <div class="mb-3">
+            <label for="inputHeigh" class="form-label">Heigh</label>
+            <input type="number" class="form-control" id="inputHeigh" required="required"/>
+            <div class="form-text">Isikan Dengan Tinggi Terakhir Badan Anda</div>
+        </div>
+    
+        <div class="mb-3">
+            <label for="inputWeight" class="form-label">Weight</label>
+            <input type="number" class="form-control" id="inputWeight" required="required"/>
+            <div class="form-text">Isikan Dengan Berat Terakhir Badan Anda</div>        
+        </div>
+
+        <button class="btn btn-primary">Submit</button>
+    </div>
+
+</div>
+
+    
+
+
+    <script>
+    //BMI CALC JS
+    function bmiCalc(){
+        console.log=("HELLO")
+
+        const bmiCalcCount
+        const Weight = parseInt(document.getElementById("InputWeight").value)
+        const Heigh = parseInt(document.getElementById("InputHeigh").value)
+
+        bmiCalcCount = (Weight / Math.pow((heigh/100),2)).toFixed(2)     //RUMUS BMi : berat / tinggi kuadrat
+        console.log(bmiCalcCount)
+        document.getElementById("Result Number").textContent = bmiCalcCount
+
+    //INDICATOR
+    if (bmiCalcCount < 0){
+            indicator ="Please Valid Number"
+    } else if (bmiCalcCount >= 0 && bmiCalcCount <= 17) {
+            indicator ="Kurang Berat"
+    } else if ()
+
+
+    }       
+
+
+
+
+
+    }
+
+
+    }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
