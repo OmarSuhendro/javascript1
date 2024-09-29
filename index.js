@@ -1,93 +1,196 @@
-var carList = [
-    'ayla',
-    'agya',
-    'avanza',
-    'calya',
-    'kijang',
-    'innova'
+var cars = "Avanza, Mobilio, Ayla, Brio, Jazz"
+console.log(cars)
+//document.writeln(cars)
+
+var gretting = "Hello World"
+console.log(gretting)
+//document.writeln(gretting)
+
+var dataString = "Ini string"
+var dataNumber = 1
+var dataBoolean = true //false
+var a = 20
+var b = 30
+var result = a*b
+
+console.log(dataString)
+console.log(dataNumber)
+console.log(dataBoolean)
+console.log(result)
+
+
+//VAR & CONST
+// var dataString = "Ini bukan String"
+// console.log(dataString)
+
+// const dataConst = "hello"
+// const dataConst = "World"
+// console.log(dataConst)
+
+
+//OPERATION ARITMETIKA
+const resultTambah = 3 + 5
+console.log(resultTambah)
+
+const resultKurang = '3' - 5
+console.log('TEST', resultKurang)
+
+const resultBagi = 10 / 4
+console.log(resultBagi)
+
+const resultSisaBagi = 10 % 4
+console.log(resultSisaBagi)
+
+
+//OPERATOR PERBANDINGAN
+const resultTipeData = 5 === '5' //akan ngecek tipe data
+//const resultTipeData = 5 == '5' //tidak ngecek tipe data
+console.log(resultTipeData)
+
+const resultLebihDari = 5 > 3
+console.log(resultLebihDari)
+
+const resultKurangDari = 5 < 3
+console.log(resultKurangDari)
+
+
+//OPERATOR LOGIKA
+const nilaiUjian = 75
+const nilaiAbsen = 75
+
+const lulusUjian = nilaiUjian >= 75
+const lulusAbsen = nilaiAbsen >= 75
+
+const lulusSempurna = lulusUjian && lulusAbsen
+const lulusSaja = lulusUjian || lulusAbsen
+
+console.log('Lulus Sempurna:', lulusSempurna)
+console.log('Lulus Saja:', lulusSaja)
+
+
+//CONDITIONAL
+// if (nilaiUjian >= 75) {
+//     console.log('LULUS')
+// } else {
+//     console.log('TIDAK LULUS')
+// }
+
+if (nilaiUjian >= 75 && nilaiAbsen >= 75){
+    console.log("LULUS SEMPURNA")
+}else if(nilaiUjian < 75 && nilaiAbsen >= 75){
+    console.log("LULUS SAJA")
+}else if(nilaiUjian >= 75 && nilaiAbsen < 75){
+    console.log("LULUS SAJA")
+}else {
+    console.log("TIDAK LULUS")
+}
+
+//TERNERY OPERATOR
+const kelulusanSiswa = nilaiUjian >= 75 && nilaiAbsen >= 75 ? 'LULUS SEMPURNA' : (nilaiUjian < 75 && nilaiAbsen >= 75) || nilaiUjian >= 75 && nilaiAbsen < 75 ? 'LULUS SAJA' : 'TIDAK LULUS'
+console.log('HASIL KELULUSAN: ', kelulusanSiswa)
+
+
+//ARRAY
+const mobil = [
+    'Ayla',
+    'Agya',
+    'Calya',
+    'Sigra',
+    'Jazz',
+    'Mobilio',
+    'BRV'
 ]
+console.log(mobil)
+console.table(mobil)
 
-console.log(carList)
-document.writeln(carList)
-document.getElementById('cars').innerHTML = carList
+//get data index n
+console.log('Data Index ke 4 = ', mobil[4])
 
-//TIPE DATA
-const string = 'Buku'
-const number = 1234567
-const boolean = true //false
-const date = new Date()
+//Find length/jumlah data
+console.log(mobil.length)
 
-console.log(string)
-console.log(number)
-console.log(boolean)
-console.log(date)
-
-//ARRAY MENTHOD
-console.log('DATA INDEX KE TIGA:', carList[3]) //muncul data index ke-
-console.log('BANYAK DATA:', carList.length)    //muncul banyaknya data
-console.log('UBAH ARRAY JADI STRING', carList.toString()) //ubah array jadi string
-
-//TAMBAH DATA ARRAY
-carList.push('Tesla')
-console.log(carList)
-
-//REMOVE LAST
-carList.pop()
-console.log(carList)
-
-//DELETE
-delete carList[3]
-console.log (carList)
-
-//NEW DATA
-const motorCycleList = [
-    'VARIO',
-    'PCX',
-    'ADV',
-    'NMAX',
-    'CBR',
-    'VESPA'
-]
-
-//CONCAT
-const newVehicle = carList.concat(motorCycleList)
-console.log ('DATA KENDARAAN :', newVehicle)
-
-//PERHITUNGAN
-const resultTambah = 3 + 2
-console.log('Hasil Tambah :' resultTambah)
+//ARRAY METHODS
+mobil.push('Kijang')
+console.log(mobil)
 
 
+//LOOPING
+
+//for
+for(index = 0; index < mobil.length; index += 1){
+    console.log(mobil[index])
+}
+
+//for in
+const user = {
+    fullName : 'Jhon',
+    email : 'jhon@mail.co',
+    age:  '25'
+}
+let print = ''
+for(let data in user){
+    print += user[data] + ' '
+}
+console.log(print)
 
 
+//for of
+// let print2 = ''
+// for(let data2 of user){
+//     print2 += data2
+// }
+// console.log(print2)
 
-
-
-
-
-
-
-const foods = [
+const food = [
     {
-        dataId: 1,
+        id : 1,
         rasa: 'Manis',
         warna: 'Merah',
-        bentuk: 'bulat'
+        bentuk: 'Bulat'
     },
-
     {
-        dataId: 2,
-        rasa: 'Asam',
+        id : 2,
+        rasa: 'Pahit',
         warna: 'Kuning',
         bentuk: 'Kotak'
     },
-
     {
-        dataId: 3,
-        rasa: 'Pedas',
-        warna: 'Merah',
-        bentuk: 'Panjang'
+        id : 3,
+        rasa: 'Asam',
+        warna: 'Hijau',
+        bentuk: 'Bulat'
     }
 ]
+food.forEach(foods => {
+    for(let value in foods){
+        console.log(`${foods[value]}`)
+        //data = `${foods[value]}`
+        //document.getElementsByTagName('p').innerHTML = data
+    }
+})
 
-foods.forEach(food => {} )
+
+//FUNCTION
+
+//declaration
+function userLogin(fullname, email){
+    console.log(`Full Name: ${fullname}, Email: ${email}`)
+}
+userLogin('Dwi Pamungkas', 'dw.pamungkas@gmail.com')
+
+
+//expression1
+const userLogin2 = function(fullname, email){
+    const resultUser = `Full Name: ${fullname}, Email: ${email}`
+    return resultUser
+}
+console.log(userLogin2('Dwi Pamungkas', 'dw.pamungkas@gmail.com'))
+
+
+//expression2 - arrow function
+const userLogin3 = (fullname, email) => {
+    const resultUser = `Full Name: ${fullname}, Email: ${email}`
+    return resultUser
+}
+console.log(userLogin3('Dwi Pamungkas', 'dw.pamungkas@gmail.com'))
+
